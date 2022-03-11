@@ -1,0 +1,131 @@
+@import "../../breakpoints";
+.feature {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #4d4242;
+  color: #d0cbcb;
+  overflow-x: hidden;
+
+  .container {
+    padding: 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 184px;
+    margin-bottom: -90px;
+    @include sm {
+      padding: 30px 10px;
+    }
+    .left {
+      .list {
+        margin-right: 22px;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #d0cbcb;
+        @include sm {
+          font-size: 12px;
+          margin-right: 5px;
+        }
+      }
+      .list-active {
+        margin-right: 22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        color: #ffffff;
+        border-bottom: 2px solid #ffffff;
+        font-family: "Inter", sans-serif;
+        @include sm {
+          font-size: 12px;
+        }
+      }
+    }
+    .right {
+      position: relative;
+      img {
+        height: 12px;
+        width: 18px;
+        @include sm {
+          height: 10px;
+          width: 16px;
+        }
+      }
+      span {
+        margin-left: 10px;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+        @include sm {
+          font-size: 12px;
+        }
+      }
+      &:hover {
+        color: #ffffff;
+      }
+      .options {
+        position: absolute;
+        width: 228px;
+        height: 190px;
+        background: #131313;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        z-index: 999;
+        margin-left: -100px;
+        visibility: hidden;
+        @include sm {
+          width: 198px;
+          height: 160px;
+          margin-left: -132px;
+        }
+        input {
+          background-color: #131313;
+          border: none;
+          font-weight: 300;
+          font-size: 20px;
+          font-family: "Source Sans Pro", sans-serif;
+          border-bottom: 1px solid #cbcbcb;
+          width: 70%;
+          margin-top: 23px;
+          margin-bottom: 20px;
+          @include sm {
+            font-size: 15px;
+            width: 65%;
+          }
+        }
+        select {
+          width: 168.45px;
+          height: 37.5px;
+          color: white;
+          background: #232323;
+          border-radius: 4.68775px;
+          font-weight: 400;
+          font-size: 17px;
+          margin-bottom: 10px;
+          font-family: "Source Sans Pro", sans-serif;
+          @include sm {
+            width: 148.45px;
+            height: 27.5px;
+            font-size: 14px;
+          }
+        }
+      }
+      .options-active {
+        visibility: visible;
+      }
+    }
+  }
+  .content {
+    display: none;
+  }
+  .active-content {
+    display: block;
+  }
+}

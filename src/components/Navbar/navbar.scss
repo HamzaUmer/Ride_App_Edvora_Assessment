@@ -1,0 +1,52 @@
+@import "../../breakpoints";
+.navbar {
+  width: 100%;
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: var(--main-color);
+
+  .container {
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 84px;
+    @include sm {
+      padding: 0 30px;
+    }
+
+    .left {
+      font-size: 36px;
+      font-weight: 700;
+      font-family: "Source Sans Pro", sans-serif;
+      @include sm {
+        font-size: 20px;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      h3 {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        @include sm {
+          font-size: 14px;
+        }
+      }
+      img {
+        height: 44px;
+        margin-left: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        @include sm {
+          height: 38px;
+        }
+      }
+    }
+  }
+}
